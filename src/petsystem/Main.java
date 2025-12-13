@@ -11,7 +11,7 @@ public class Main {
         Adopter adopter = new Adopter("Alice", 25);
 
         shelter.showInfo();
-        pet1.displayInfo()
+        pet1.displayInfo();
         pet2.displayInfo();
 
         adopter.adoptPet(pet1);
