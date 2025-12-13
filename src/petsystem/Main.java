@@ -15,7 +15,7 @@ public class Main {
         pet2.displayInfo();
 
         adopter.adoptPet(pet1);
-        adopter.adoptPet(pet1); // сравнение объектов по состоянию
+        adopter.adoptPet(pet1);
 
         pet1.displayInfo();
     }
