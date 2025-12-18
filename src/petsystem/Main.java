@@ -1,22 +1,23 @@
 package petsystem;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-        Shelter shelter = new Shelter("Happy Paws");
+        Scanner scanner = new Scanner(System.in);
 
-        Pet pet1 = new Pet("Buddy", "Dog", 3);
-        Pet pet2 = new Pet("Milo", "Cat", 2);
+        System.out.println("Enter pet name:");
+        String name = scanner.nextLine();
 
-        Adopter adopter = new Adopter("Alice", 25);
+        System.out.println("Enter pet type:");
+        String type = scanner.nextLine();
 
-        shelter.showInfo();
-        pet1.displayInfo();
-        pet2.displayInfo();
+        System.out.println("Enter pet age:");
+        int age = scanner.nextInt();
 
-        adopter.adoptPet(pet1);
-        adopter.adoptPet(pet1);
+        Pet pet = new Pet(name, type, age);
 
-        pet1.displayInfo();
+        pet.displayInfo();
     }
 }
