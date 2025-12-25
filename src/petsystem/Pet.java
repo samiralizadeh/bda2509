@@ -1,32 +1,30 @@
 package petsystem;
 
 public class Pet {
-    private String name;
-    private String type;
-    private int age;
-    private boolean adopted;
 
-    public Pet(String name, String type, int age) {
+    private String name;
+
+    public Pet(String name) {
         this.name = name;
-        this.type = type;
-        this.age = age;
-        this.adopted = false;
     }
 
     public String getName() {
         return name;
     }
 
-    public boolean isAdopted() {
-        return adopted;
+    @Override
+    public String toString() {
+        return "Pet name: " + name;
     }
 
-    public void setAdopted(boolean adopted) {
-        this.adopted = adopted;
+    @Override
+    public boolean equals(Object obj) {
+        Pet other = (Pet) obj;
+        return name.equals(other.name);
     }
 
-    public void displayInfo() {
-        System.out.println(name + " (" + type + "), age: " + age +
-                ", adopted: " + adopted);
+    @Override
+    public int hashCode() {
+        return name.hashCode();
     }
 }

@@ -6,18 +6,22 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        Shelter shelter = new Shelter();
 
         System.out.println("Enter pet name:");
-        String name = scanner.nextLine();
+        String petName = scanner.nextLine();
 
-        System.out.println("Enter pet type:");
-        String type = scanner.nextLine();
+        Pet pet = new Pet(petName);
+        shelter.addPet(pet);
 
-        System.out.println("Enter pet age:");
-        int age = scanner.nextInt();
+        System.out.println("Enter adopter name:");
+        String adopterName = scanner.nextLine();
 
-        Pet pet = new Pet(name, type, age);
+        Adopter adopter = new Adopter(adopterName);
 
-        pet.displayInfo();
+        Pet found = shelter.findPet(petName);
+        adopter.adopt(found);
+
+        shelter.showPets();
     }
 }
