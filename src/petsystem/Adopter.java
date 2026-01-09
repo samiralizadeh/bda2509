@@ -9,7 +9,8 @@ public class Adopter {
     }
 
     public void adopt(Pet pet) {
-        System.out.println(name + " adopted " + pet.getName());
+        if (pet != null) {
+            System.out.println(name + " adopted " + pet);
+        }
     }
 }
-

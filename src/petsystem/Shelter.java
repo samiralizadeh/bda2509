@@ -19,6 +19,18 @@ public class Shelter {
         return null;
     }
 
+    public void sortByName() {
+        for (int i = 0; i < pets.size() - 1; i++) {
+            for (int j = i + 1; j < pets.size(); j++) {
+                if (pets.get(i).getName().compareTo(pets.get(j).getName()) > 0) {
+                    Pet temp = pets.get(i);
+                    pets.set(i, pets.get(j));
+                    pets.set(j, temp);
+                }
+            }
+        }
+    }
+
     public void showPets() {
         for (Pet pet : pets) {
             System.out.println(pet);
