@@ -6,12 +6,10 @@ public class Shelter {
 
     private ArrayList<Pet> pets = new ArrayList<>();
 
-    // add pet to shelter
     public void addPet(Pet pet) {
         pets.add(pet);
     }
 
-    // search pet by name
     public Pet findPet(String name) {
         for (Pet pet : pets) {
             if (pet.getName().equals(name)) {
@@ -21,7 +19,6 @@ public class Shelter {
         return null;
     }
 
-    // filtering: show only dogs
     public void showDogs() {
         for (Pet pet : pets) {
             if (pet instanceof Dog) {
@@ -30,7 +27,6 @@ public class Shelter {
         }
     }
 
-    // sorting pets by name (simple bubble sort)
     public void sortByName() {
         for (int i = 0; i < pets.size() - 1; i++) {
             for (int j = i + 1; j < pets.size(); j++) {
@@ -43,7 +39,6 @@ public class Shelter {
         }
     }
 
-    // show all pets
     public void showPets() {
         for (Pet pet : pets) {
             System.out.println(pet);
